@@ -59,7 +59,7 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in {companyInfo.founded}, Mechanical Oilseal Company began as a small family business 
+                Founded in {companyInfo.founded}, Mechanical Seal Manufacturer Company began as a small family business 
                 with a vision to provide high-quality sealing solutions to local manufacturers. Over the years, 
                 we have grown into a global leader in the sealing industry, serving customers across {companyInfo.countries} countries.
               </p>

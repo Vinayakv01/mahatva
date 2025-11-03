@@ -30,7 +30,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <img
               src="/Main logo.png"
-              alt="Mechanical Oilseal Company"
+              alt="Mechanical Seal Manufacturer Company"
               className="h-10 w-auto"
             />
           </Link>

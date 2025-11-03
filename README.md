@@ -1,6 +1,6 @@
-# Mechanical Oilseal Company Website
+# Mechanical Seal Manufacturer Company Website
 
-A modern, responsive website for a mechanical oilseal company built with React, Vite, and Tailwind CSS.
+A modern, responsive website for a mechanical seal manufacturer company built with React, Vite, and Tailwind CSS.
 
 ## Features
 

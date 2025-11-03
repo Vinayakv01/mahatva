@@ -1,4 +1,4 @@
-// Dummy data for the Mechanical Oilseal Company website
+// Dummy data for the Mechanical Seal Manufacturer Company website
 
 export const categories = [
   {
@@ -169,9 +169,9 @@ export const products = [
 ];
 
 export const companyInfo = {
-  name: "Mechanical Oilseal Company",
+  name: "Mechanical Seal Manufacturer Company",
   tagline: "Precision Sealing Solutions for Industry",
-  description: "With over 30 years of experience in the sealing industry, Mechanical Oilseal Company has been providing high-quality sealing solutions to industries worldwide. Our commitment to excellence and innovation has made us a trusted partner for businesses seeking reliable sealing products.",
+  description: "With over 30 years of experience in the sealing industry, Mechanical Seal Manufacturer Company has been providing high-quality sealing solutions to industries worldwide. Our commitment to excellence and innovation has made us a trusted partner for businesses seeking reliable sealing products.",
   address: "123 Industrial Park Drive, Manufacturing District, City, State 12345",
   phone: "+1 (555) 123-4567",
   email: "info@mechanicaloilseal.com",
