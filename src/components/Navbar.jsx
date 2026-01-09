@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import CategoryDropdown from './CategoryDropdown';
+import companyLogo from '../assets/companylogo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,8 +30,8 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center" onClick={closeMenu}>
             <img
-              src="/Main logo.png"
-              alt="Mechanical Seal Manufacturer Company"
+              src={companyLogo}
+              alt="Mahatva Engineering"
               className="h-10 w-auto"
             />
           </Link>

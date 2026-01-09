@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { companyInfo } from '../data/dummyData';
 
 const Contact = () => {
@@ -25,8 +26,35 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // EmailJS configuration - Hardcoded values
+      const serviceId = 'service_p0mg8lc';
+      const templateId = 'template_aje880d';
+      const publicKey = 'R0DUBapO16bji4kmE';
+
+      // Prepare email template parameters
+      // Note: Variable names must match the EmailJS template variables
+      const templateParams = {
+        to_email: 'vinayakv949@gmail.com',
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || 'Not provided',
+        company: formData.company || 'Not provided',
+        productInterest: formData.productInterest || 'Not specified',
+        message: formData.message,
+        reply_to: formData.email,
+        to_date: new Date().toLocaleString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric', 
+          hour: '2-digit', 
+          minute: '2-digit' 
+        }),
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({
@@ -37,7 +65,11 @@ const Contact = () => {
         message: '',
         productInterest: ''
       });
-    }, 2000);
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setIsSubmitting(false);
+      alert('Failed to send message: ' + (error.text || error.message || 'Unknown error') + '\n\nPlease try again or contact us directly at ' + companyInfo.email);
+    }
   };
 
   if (isSubmitted) {
@@ -236,21 +268,21 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                      <p className="text-gray-600">{companyInfo.email}</p>
+                      <p className="text-gray-600">
+                        <a href={`mailto:${companyInfo.email}`} className="hover:text-[#F25C05] transition-colors">
+                          {companyInfo.email}
+                        </a>
+                        {companyInfo.email2 && (
+                          <>
+                            <br />
+                            <a href={`mailto:${companyInfo.email2}`} className="hover:text-[#F25C05] transition-colors">
+                              {companyInfo.email2}
+                            </a>
+                          </>
+                        )}
+                      </p>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Map Placeholder */}
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Find Us</h2>
-                <div className="aspect-w-16 aspect-h-9">
-                  <img
-                    src="/Dummy Image.PNG"
-                    alt="Company Location Map"
-                    className="w-full h-64 object-cover rounded-lg"
-                  />
                 </div>
               </div>
 

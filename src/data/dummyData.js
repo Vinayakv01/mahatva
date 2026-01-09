@@ -1,4 +1,4 @@
-// Dummy data for the Mechanical Seal Manufacturer Company website
+// Dummy data for the Mechanical Oilseal Company website
 
 export const categories = [
   {
@@ -169,13 +169,14 @@ export const products = [
 ];
 
 export const companyInfo = {
-  name: "Mechanical Seal Manufacturer Company",
+  name: "Mahatva Engineering",
   tagline: "Precision Sealing Solutions for Industry",
-  description: "With over 30 years of experience in the sealing industry, Mechanical Seal Manufacturer Company has been providing high-quality sealing solutions to industries worldwide. Our commitment to excellence and innovation has made us a trusted partner for businesses seeking reliable sealing products.",
-  address: "123 Industrial Park Drive, Manufacturing District, City, State 12345",
-  phone: "+1 (555) 123-4567",
-  email: "info@mechanicaloilseal.com",
-  founded: "1993",
+  description: "With over 10+ years of experience in the sealing industry, Mahatva Engineering has been providing high-quality sealing solutions to industries worldwide. Our commitment to excellence and innovation has made us a trusted partner for businesses seeking reliable sealing products.",
+  address: "PRANAVI ESTATE, MHATRE NAGAR, BEHIND RELIANCE PETROL PUMP, KALYAN-BHIWANDI ROAD, KON GOAN, BHIWANDI, MAHARASHTRA, PIN CODE: 421311",
+  phone: "9967205923",
+  email: "mhtv.engineering1@gmail.com",
+  email2: "info@mahatvaengieneering.com",
+  founded: "2025",
   employees: "150+",
   countries: "25+"
 };

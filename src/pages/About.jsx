@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { companyInfo, teamMembers } from '../data/dummyData';
+import { companyInfo } from '../data/dummyData';
+import aboutImage from '../assets/aboutimage.png';
 
 const About = () => {
   return (
@@ -18,38 +19,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Stats */}
-      <section className="py-16 bg-[#F25C05]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                {companyInfo.founded}
-              </div>
-              <div className="text-orange-100">Founded</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                {companyInfo.employees}
-              </div>
-              <div className="text-orange-100">Employees</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                {companyInfo.countries}
-              </div>
-              <div className="text-orange-100">Countries</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                1000+
-              </div>
-              <div className="text-orange-100">Products</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Our Story */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,9 +28,9 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in {companyInfo.founded}, Mechanical Seal Manufacturer Company began as a small family business 
-                with a vision to provide high-quality sealing solutions to local manufacturers. Over the years, 
-                we have grown into a global leader in the sealing industry, serving customers across {companyInfo.countries} countries.
+                Founded in {companyInfo.founded}, Mahatva Engineering began as a small family business 
+                with a vision to provide high-quality sealing solutions to local manufacturers. With over 10+ years of experience, 
+                we have grown into a trusted leader in the sealing industry, serving customers worldwide.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Our commitment to innovation, quality, and customer service has been the driving force behind 
@@ -76,9 +45,9 @@ const About = () => {
             </div>
             <div>
               <img
-                src="/Dummy Image.PNG"
+                src={aboutImage}
                 alt="Company History"
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
           </div>
@@ -133,38 +102,6 @@ const About = () => {
                 Our customers are at the heart of everything we do. We build lasting relationships through exceptional service.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Team */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Leadership Team
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Meet the experienced professionals leading our company forward
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="text-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-[#F25C05] font-medium">
-                  {member.position}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
