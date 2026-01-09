@@ -237,7 +237,7 @@ const MobileMenu = () => {
       {isOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
           <div className="fixed inset-0 bg-black/50" onClick={() => setIsOpen(false)} />
-          <div className="fixed left-0 top-0 h-full w-[300px] sm:w-[350px] bg-white flex flex-col">
+              <div className="fixed left-0 top-0 h-full w-[280px] sm:w-[350px] bg-white flex flex-col">
             <div className="p-4 border-b flex items-center justify-between">
               <Link to="/" onClick={() => setIsOpen(false)}>
                 <img src={LOGO_URL} alt="Company Logo" className="h-[51px] w-auto" />

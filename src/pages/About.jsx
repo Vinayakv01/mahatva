@@ -9,10 +9,10 @@ const About = () => {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About {companyInfo.name}
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               {companyInfo.description}
             </p>
           </div>
@@ -24,10 +24,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Our Story
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-base sm:text-lg text-gray-600 mb-6">
                 Founded in {companyInfo.founded}, Mahatva Engineering began as a small family business 
                 with a vision to provide high-quality sealing solutions to local manufacturers. With over 10+ years of experience, 
                 we have grown into a trusted leader in the sealing industry, serving customers worldwide.
@@ -58,10 +58,10 @@ const About = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               The principles that guide everything we do
             </p>
           </div>
@@ -109,10 +109,10 @@ const About = () => {
       {/* Call to Action */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Ready to Work With Us?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Ready to Work With Us?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto px-4">
             Let's discuss how our sealing solutions can help your business succeed
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -53,10 +53,10 @@ const Products = () => {
       <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Products
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Discover our comprehensive range of high-quality sealing solutions designed for various industrial applications
             </p>
           </div>
@@ -155,10 +155,10 @@ const Products = () => {
       {/* Call to Action */}
       <section className="py-16 bg-[#F25C05]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Need a Custom Solution?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-orange-100 mb-8 max-w-2xl mx-auto px-4">
             Our engineering team can design and manufacture custom sealing solutions for your specific requirements
           </p>
           <a

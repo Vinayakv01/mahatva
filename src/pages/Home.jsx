@@ -10,7 +10,7 @@ import SideActionButtons from '../components/sections/SideActionButtons';
 const Home = () => {
   return (
     <div className="min-h-screen bg-background">
-      <main className="pt-[90px] lg:pt-[146px]">
+      <main className="pt-[90px] md:pt-[120px] lg:pt-[146px]">
         <HeroBanner />
         <CompanyIntroduction />
         <ProductsShowcase />

@@ -79,15 +79,15 @@ const ContactForm = () => {
     return (
       <section
         id="form"
-        className="relative text-white bg-cover bg-center bg-gray-900 bg-blend-overlay"
+        className="relative text-white bg-cover bg-center bg-gray-900 bg-blend-overlay md:pt-[120px] md:pb-[120px]"
         style={{
-          paddingTop: '120px',
-          paddingBottom: '120px',
+          paddingTop: '60px',
+          paddingBottom: '60px',
           backgroundImage: `url('https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/d6064255-48bc-4eb5-b1fc-2e0647dd5996-tngseal-com/assets/images/og20241022141711171194078_jpg-29.webp')`
         }}
       >
-        <div className="container max-w-[1200px] mx-auto px-5 md:px-10 lg:px-15">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-md mx-auto text-center">
+      <div className="container max-w-[1200px] mx-auto px-5 md:px-10 lg:px-15">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 sm:p-8 max-w-md mx-auto text-center">
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -112,10 +112,10 @@ const ContactForm = () => {
   return (
     <section
       id="form"
-      className="relative text-white bg-cover bg-center bg-gray-900 bg-blend-overlay"
+      className="relative text-white bg-cover bg-center bg-gray-900 bg-blend-overlay md:pt-[120px] md:pb-[120px]"
       style={{
-        paddingTop: '120px',
-        paddingBottom: '120px',
+        paddingTop: '60px',
+        paddingBottom: '60px',
         backgroundImage: `url('https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/d6064255-48bc-4eb5-b1fc-2e0647dd5996-tngseal-com/assets/images/og20241022141711171194078_jpg-29.webp')`
       }}
     >
@@ -126,7 +126,7 @@ const ContactForm = () => {
               <span className="w-8 h-px bg-accent  mr-3"></span>
               CONTACT
             </p>
-            <h2 className="text-[48px] font-bold text-white" style={{ lineHeight: 1.2 }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold text-white" style={{ lineHeight: 1.2 }}>
               HOW CAN WE HELP YOU?
             </h2>
           </div>

@@ -40,20 +40,17 @@ const SideActionButtons = () => {
     // Common Tailwind CSS classes for the action buttons to ensure a consistent look and feel.
     // Conforms to the 40-50px square size, shadow, and hover effects from the design instructions.
     const buttonBaseClasses = 
-        "w-11 h-11 flex items-center justify-center rounded-sm text-white shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out hover:scale-110";
-    
-    // Consistent icon size for all buttons.
-    const iconSize = 20;
+        "w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-sm text-white shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out hover:scale-110";
 
     return (
-        <div className="fixed right-2 bottom-32 z-50 flex flex-col items-center gap-2">
+        <div className="fixed right-2 sm:right-4 bottom-20 sm:bottom-32 z-50 flex flex-col items-center gap-2">
             {/* Email Contact Button - Opens the default mail client. */}
             <a
                 href="mailto:mhtv.engineering1@gmail.com"
                 aria-label="Email Us"
                 className={`${buttonBaseClasses} bg-accent hover:bg-orange-dark`}
             >
-                <FaEnvelope size={iconSize} />
+                <FaEnvelope className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
             
             {/* WhatsApp Chat Button - Opens a new tab to a WhatsApp chat. */}
@@ -64,7 +61,7 @@ const SideActionButtons = () => {
                 aria-label="Chat on WhatsApp"
                 className={`${buttonBaseClasses} bg-[#25D366] hover:bg-[#1EBE57]`}
             >
-                <FaWhatsapp size={iconSize} />
+                <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
 
             {/* Phone Call Button - Initiates a call on compatible devices. */}
@@ -73,7 +70,7 @@ const SideActionButtons = () => {
                 aria-label="Call Us"
                 className={`${buttonBaseClasses} bg-accent hover:bg-orange-dark`}
             >
-                <FaPhone size={iconSize} />
+                <FaPhone className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
 
             {/* Scroll to Top Button - Appears on scroll and smoothly returns the user to the top. */}
@@ -86,7 +83,7 @@ const SideActionButtons = () => {
                         : "opacity-0 scale-0 pointer-events-none"
                 }`}
             >
-                <FaArrowUp size={iconSize} />
+                <FaArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
         </div>
     );

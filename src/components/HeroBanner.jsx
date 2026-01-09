@@ -44,7 +44,7 @@ const HeroBanner = () => {
   return (
     <section
       id="ibframe"
-      className="relative w-full aspect-[1920/920] max-h-[920px] overflow-hidden group bg-gray-900"
+      className="relative w-full aspect-[1920/920] md:aspect-[1920/920] max-h-[500px] md:max-h-[920px] overflow-hidden group bg-gray-900"
     >
       <Swiper
         modules={[Autoplay, EffectFade, Navigation]}
@@ -84,13 +84,13 @@ const HeroBanner = () => {
                 >
                   {slide.headline && (
                     <h1
-                      className="text-5xl font-bold leading-tight drop-shadow-md text-white"
+                      className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-md text-white"
                       dangerouslySetInnerHTML={{ __html: slide.headline }}
                     />
                   )}
                   {slide.subheading && (
                     <p
-                      className="mt-6 text-xl leading-relaxed drop-shadow-md text-white"
+                      className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed drop-shadow-md text-white"
                       dangerouslySetInnerHTML={{
                         __html: slide.subheading,
                       }}
@@ -103,11 +103,11 @@ const HeroBanner = () => {
         ))}
       </Swiper>
 
-      <div className="swiper-button-prev-hero absolute top-1/2 left-4 md:left-10 -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/40">
-        <ChevronLeft className="w-8 h-8 md:w-10 md:h-10 text-white" />
+      <div className="swiper-button-prev-hero absolute top-1/2 left-2 sm:left-4 md:left-10 -translate-y-1/2 z-10 cursor-pointer p-1.5 sm:p-2 rounded-full bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/40">
+        <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
       </div>
-      <div className="swiper-button-next-hero absolute top-1/2 right-4 md:right-10 -translate-y-1/2 z-10 cursor-pointer p-2 rounded-full bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/40">
-        <ChevronRight className="w-8 h-8 md:w-10 md:h-10 text-white" />
+      <div className="swiper-button-next-hero absolute top-1/2 right-2 sm:right-4 md:right-10 -translate-y-1/2 z-10 cursor-pointer p-1.5 sm:p-2 rounded-full bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/40">
+        <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
       </div>
     </section>
   );

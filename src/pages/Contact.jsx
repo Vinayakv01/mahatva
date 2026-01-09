@@ -104,10 +104,10 @@ const Contact = () => {
       <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Get in touch with our team for personalized sealing solutions and expert advice
             </p>
           </div>
@@ -119,8 +119,8 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+            <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -232,8 +232,8 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-[#F25C05] rounded-lg flex items-center justify-center flex-shrink-0">
@@ -287,8 +287,8 @@ const Contact = () => {
               </div>
 
               {/* Business Hours */}
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h2>
+              <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Business Hours</h2>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Monday - Friday</span>

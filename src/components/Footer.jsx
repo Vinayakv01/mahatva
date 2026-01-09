@@ -16,7 +16,7 @@ const TikTokIcon = (props) => (
 
 const CookieConsentBanner = ({ onAccept, onReject }) => {
     return (
-        <div className="fixed bottom-5 left-5 bg-[#333333] text-white p-5 rounded-md shadow-2xl max-w-sm z-50">
+        <div className="fixed bottom-4 left-4 right-4 sm:left-5 sm:right-auto bg-[#333333] text-white p-4 sm:p-5 rounded-md shadow-2xl max-w-sm sm:max-w-sm z-50 mx-auto sm:mx-0">
             <h4 className="font-semibold text-base mb-2">We value your privacy</h4>
             <p className="text-sm text-gray-300 mb-4">
                 We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
@@ -117,9 +117,9 @@ const FooterSection = () => {
 
     return (
         <>
-            <footer className="bg-[#202020] text-gray-300 font-sans pt-20">
+            <footer className="bg-[#202020] text-gray-300 font-sans pt-12 sm:pt-16 md:pt-20">
                 <div className="max-w-[1200px] mx-auto px-5 lg:px-0">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
                         <div className="lg:col-span-1">
                             <Link to="/" className="inline-block">
                                 <img
@@ -128,7 +128,7 @@ const FooterSection = () => {
                                     className="h-[51px] w-auto"
                                 />
                             </Link>
-                            <p className="mt-6 text-sm text-[#cccccc] leading-6">
+                            <p className="mt-4 sm:mt-6 text-sm text-[#cccccc] leading-6">
                                 Mahatva Engineering has been designing and producing Mechanical Seals Since 2025 having 10+ years of experience in the industry.
                             </p>
                             <div className="flex items-center space-x-3 mt-6">
@@ -200,7 +200,7 @@ const FooterSection = () => {
                         </div>
                     </div>
 
-                    <div className="mt-14 pt-8 pb-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-center">
+                    <div className="mt-8 sm:mt-12 md:mt-14 pt-6 sm:pt-8 pb-6 sm:pb-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-center gap-4">
                         <p className="text-xs text-[#999999] mb-4 md:mb-0">
                             Copyright © {new Date().getFullYear()} Mahatva Engineering All rights reserved.
                         </p>

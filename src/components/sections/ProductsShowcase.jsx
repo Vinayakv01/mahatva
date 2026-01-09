@@ -120,11 +120,11 @@ const ProductsShowcase = () => {
     return (
         <section id="frame2" className="bg-secondary py-24 sm:py-32">
             <div className="container mx-auto px-4 max-w-[1200px]">
-                <div className="text-center mb-16" data-aos="zoom-in">
-                    <h3 className="text-3xl md:text-4xl font-semibold text-foreground">
+                <div className="text-center mb-12 sm:mb-16" data-aos="zoom-in">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground px-4">
                         <span className="text-accent">Mahatva Engineering®</span> PRODUCTS
                     </h3>
-                    <p className="mt-4 text-lg text-muted-foreground">
+                    <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground px-4">
                         Choose from Our Range of Products
                     </p>
                 </div>

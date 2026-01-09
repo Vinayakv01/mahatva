@@ -10,15 +10,15 @@ const ProductCard = ({ product }) => {
           className="w-full h-48 object-cover"
         />
       </div>
-      <div className="p-6">
-        <div className="flex justify-between items-start mb-2">
-          <span className="text-sm text-[#F25C05] font-medium">{product.category}</span>
-          <span className="text-lg font-bold text-gray-900">{product.price}</span>
+      <div className="p-4 sm:p-6">
+        <div className="flex justify-between items-start mb-2 flex-wrap gap-2">
+          <span className="text-xs sm:text-sm text-[#F25C05] font-medium">{product.category}</span>
+          <span className="text-base sm:text-lg font-bold text-gray-900">{product.price}</span>
         </div>
-        <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
           {product.name}
         </h3>
-        <p className="text-gray-600 mb-4 line-clamp-3">
+        <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-3">
           {product.description}
         </p>
         <div className="flex flex-wrap gap-2 mb-4">
@@ -31,16 +31,16 @@ const ProductCard = ({ product }) => {
             </span>
           ))}
         </div>
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
           <Link
             to={`/products/${product.id}`}
-            className="flex-1 bg-[#F25C05] text-white text-center py-2 px-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors"
+            className="flex-1 bg-[#F25C05] text-white text-center py-2 px-4 rounded-lg text-sm sm:text-base font-semibold hover:bg-orange-600 transition-colors"
           >
             View Details
           </Link>
           <Link
             to="/contact"
-            className="flex-1 border-2 border-[#F25C05] text-[#F25C05] text-center py-2 px-4 rounded-lg font-semibold hover:bg-[#F25C05] hover:text-white transition-colors"
+            className="flex-1 border-2 border-[#F25C05] text-[#F25C05] text-center py-2 px-4 rounded-lg text-sm sm:text-base font-semibold hover:bg-[#F25C05] hover:text-white transition-colors"
           >
             Quote
           </Link>
