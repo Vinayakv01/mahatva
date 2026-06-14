@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Facebook, 
-  Youtube, 
-  Linkedin, 
+import {
+  Facebook,
+  Youtube,
+  Linkedin,
   Music as TiktokIcon,
-  ChevronDown, 
+  ChevronDown,
   Menu,
   Download,
   X
 } from 'lucide-react';
 import { cn } from '../lib/utils';
 
-const LOGO_URL = "/Mainlogo.png";
+const LOGO_URL = "/Logo.png";
+const NAMELOGO_URL = "/NameLogo.png";
 
 const products = [
   { title: "O-ring Pusher Mechanical Seals", href: "/products" },
@@ -53,8 +54,8 @@ const DesktopTopBar = () => {
       <div className="container mx-auto px-5 flex items-center justify-between h-[56px] max-w-[1920px]">
         <div className="flex items-center">
           <nav className="flex items-center">
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className={cn(
                 "px-3 py-2 text-base text-muted-foreground hover:text-accent font-normal",
                 location.pathname === '/about' && "text-accent"
@@ -62,8 +63,8 @@ const DesktopTopBar = () => {
             >
               About
             </Link>
-            
-            <div 
+
+            <div
               className="relative"
               onMouseEnter={() => setOpenDropdown('products')}
               onMouseLeave={() => setOpenDropdown(null)}
@@ -87,8 +88,8 @@ const DesktopTopBar = () => {
               )}
             </div>
 
-            <Link 
-              to="/products" 
+            <Link
+              to="/products"
               className={cn(
                 "px-3 py-2 text-base text-muted-foreground hover:text-accent font-normal",
                 location.pathname === '/products' && "text-accent"
@@ -96,8 +97,8 @@ const DesktopTopBar = () => {
             >
               Blog
             </Link>
-            
-            <div 
+
+            <div
               className="relative"
               onMouseEnter={() => setOpenDropdown('support')}
               onMouseLeave={() => setOpenDropdown(null)}
@@ -121,8 +122,8 @@ const DesktopTopBar = () => {
               )}
             </div>
 
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className={cn(
                 "px-3 py-2 text-base text-muted-foreground hover:text-accent font-normal",
                 location.pathname === '/contact' && "text-accent"
@@ -130,8 +131,8 @@ const DesktopTopBar = () => {
             >
               FAQ
             </Link>
-            
-            <div 
+
+            <div
               className="relative"
               onMouseEnter={() => setOpenDropdown('join')}
               onMouseLeave={() => setOpenDropdown(null)}
@@ -155,9 +156,9 @@ const DesktopTopBar = () => {
               )}
             </div>
           </nav>
-          
+
           <div className="h-4 w-px bg-gray-400 mx-4"></div>
-          
+
           <Link
             to="/contact"
             className="bg-destructive text-white px-3 py-[6px] text-base font-semibold rounded hover:bg-destructive/90"
@@ -165,7 +166,7 @@ const DesktopTopBar = () => {
             CONTACT
           </Link>
         </div>
-        
+
         <div className="flex items-center gap-x-3">
           <div className="flex items-center gap-x-3">
             <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent">
@@ -191,15 +192,16 @@ const DesktopBottomBar = () => {
   return (
     <div className="hidden lg:block bg-white">
       <div className="container mx-auto px-5 flex items-center justify-between h-[90px] max-w-[1920px]">
-        <Link to="/">
-          <img src={LOGO_URL} alt="Company Logo" className="h-[51px] w-auto" />
+        <Link to="/" className='flex'>
+          <img src={LOGO_URL} alt="Company Logo" className="h-[70px] w-auto" />
+          <img src={NAMELOGO_URL} alt="Company Logo" className="h-[70px] w-auto" />
         </Link>
         <nav className="flex items-center gap-x-6">
           <ul className="flex items-center gap-x-6">
             {secondaryNavLinks.map(link => (
               <li key={link.title}>
-                <Link 
-                  to={link.href} 
+                <Link
+                  to={link.href}
                   className="text-sm font-semibold uppercase text-foreground hover:text-accent transition-colors"
                 >
                   {link.title}
@@ -207,13 +209,15 @@ const DesktopBottomBar = () => {
               </li>
             ))}
           </ul>
-          <Link
-            to="/products"
+          <a
+            href="/Catalogue.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-destructive text-white font-semibold text-sm h-auto py-3 px-5 rounded flex items-center gap-2 hover:bg-destructive/90"
           >
             <Download className="h-4 w-4" />
             CATALOGUES
-          </Link>
+          </a>
         </nav>
       </div>
     </div>
@@ -237,7 +241,7 @@ const MobileMenu = () => {
       {isOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
           <div className="fixed inset-0 bg-black/50" onClick={() => setIsOpen(false)} />
-              <div className="fixed left-0 top-0 h-full w-[280px] sm:w-[350px] bg-white flex flex-col">
+          <div className="fixed left-0 top-0 h-full w-[280px] sm:w-[350px] bg-white flex flex-col">
             <div className="p-4 border-b flex items-center justify-between">
               <Link to="/" onClick={() => setIsOpen(false)}>
                 <img src={LOGO_URL} alt="Company Logo" className="h-[51px] w-auto" />
@@ -246,14 +250,14 @@ const MobileMenu = () => {
                 <X className="h-6 w-6" />
               </button>
             </div>
-            
+
             <div className="flex-grow overflow-y-auto">
               <div className="p-4 border-b">
                 <Link to="/about" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>
                   About
                 </Link>
               </div>
-              
+
               <div className="border-b">
                 <button
                   onClick={() => setOpenAccordion(openAccordion === 'products' ? null : 'products')}
@@ -277,13 +281,13 @@ const MobileMenu = () => {
                   </div>
                 )}
               </div>
-              
+
               <div className="p-4 border-b">
                 <Link to="/products" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>
                   Blog
                 </Link>
               </div>
-              
+
               <div className="border-b">
                 <button
                   onClick={() => setOpenAccordion(openAccordion === 'support' ? null : 'support')}
@@ -307,13 +311,13 @@ const MobileMenu = () => {
                   </div>
                 )}
               </div>
-              
+
               <div className="p-4 border-b">
                 <Link to="/contact" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>
                   FAQ
                 </Link>
               </div>
-              
+
               <div className="border-b">
                 <button
                   onClick={() => setOpenAccordion(openAccordion === 'join' ? null : 'join')}
@@ -337,14 +341,14 @@ const MobileMenu = () => {
                   </div>
                 )}
               </div>
-              
+
               <div className="p-4 border-b">
                 <p className="text-lg font-medium mb-2">Product Categories</p>
                 <ul>
                   {secondaryNavLinks.map(link => (
                     <li key={link.title}>
-                      <Link 
-                        to={link.href} 
+                      <Link
+                        to={link.href}
                         className="block py-2 text-muted-foreground hover:text-foreground uppercase text-sm"
                         onClick={() => setIsOpen(false)}
                       >
@@ -355,16 +359,18 @@ const MobileMenu = () => {
                 </ul>
               </div>
             </div>
-            
+
             <div className="p-4 mt-auto border-t space-y-4">
-              <Link
-                to="/products"
+              <a
+                href="/Catalogue.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full bg-destructive text-white font-semibold uppercase flex items-center justify-center gap-2 py-3 px-4 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 <Download className="h-4 w-4" />
                 Catalogues
-              </Link>
+              </a>
               <Link
                 to="/contact"
                 className="w-full bg-destructive text-white font-semibold uppercase flex items-center justify-center py-3 px-4 rounded"
@@ -385,7 +391,7 @@ export default function HeaderNavigation() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm font-sans">
       <DesktopTopBar />
       <DesktopBottomBar />
-      
+
       <div className="lg:hidden flex items-center justify-between h-[90px] px-5 bg-white">
         <Link to="/">
           <img src={LOGO_URL} alt="Company Logo" className="h-[51px] w-auto" />

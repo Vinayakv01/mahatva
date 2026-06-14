@@ -26,7 +26,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // EmailJS configuration - Hardcoded values
       const serviceId = 'service_p0mg8lc';
@@ -44,18 +44,18 @@ const ContactForm = () => {
         productInterest: formData.productInterest || 'Not specified',
         message: formData.message,
         reply_to: formData.email,
-        to_date: new Date().toLocaleString('en-US', { 
-          year: 'numeric', 
-          month: 'long', 
-          day: 'numeric', 
-          hour: '2-digit', 
-          minute: '2-digit' 
+        to_date: new Date().toLocaleString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
         }),
       };
 
       // Send email using EmailJS
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
+
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({
@@ -86,8 +86,8 @@ const ContactForm = () => {
           backgroundImage: `url('https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/d6064255-48bc-4eb5-b1fc-2e0647dd5996-tngseal-com/assets/images/og20241022141711171194078_jpg-29.webp')`
         }}
       >
-      <div className="container max-w-[1200px] mx-auto px-5 md:px-10 lg:px-15">
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 sm:p-8 max-w-md mx-auto text-center">
+        <div className="container max-w-[1200px] mx-auto px-5 md:px-10 lg:px-15">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 sm:p-8 max-w-md mx-auto text-center">
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -179,7 +179,7 @@ const ContactForm = () => {
                     <option value="">Product Interest (Optional)</option>
                     <option value="radial-seals">Radial Seals</option>
                     <option value="axial-seals">Axial Seals</option>
-                    <option value="hydraulic-seals">Hydraulic Seals</option>
+                    {/* <option value="hydraulic-seals">Hydraulic Seals</option> */}
                     <option value="rotary-seals">Rotary Seals</option>
                     <option value="o-rings">O-Rings</option>
                     <option value="gaskets">Gaskets</option>

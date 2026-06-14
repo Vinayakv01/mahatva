@@ -7,7 +7,7 @@ const About = () => {
     <div className="bg-gray-50">
       {/* Hero Section */}
       <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mt-28 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About {companyInfo.name}
@@ -28,18 +28,18 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-6">
-                Founded in {companyInfo.founded}, Mahatva Engineering began as a small family business 
-                with a vision to provide high-quality sealing solutions to local manufacturers. With over 10+ years of experience, 
+                Founded in {companyInfo.founded}, Mahatva Engineering began as a small family business
+                with a vision to provide high-quality sealing solutions to local manufacturers. With over 10+ years of experience,
                 we have grown into a trusted leader in the sealing industry, serving customers worldwide.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Our commitment to innovation, quality, and customer service has been the driving force behind 
-                our success. We continuously invest in research and development to bring cutting-edge sealing 
+                Our commitment to innovation, quality, and customer service has been the driving force behind
+                our success. We continuously invest in research and development to bring cutting-edge sealing
                 technologies to the market.
               </p>
               <p className="text-lg text-gray-600">
-                Today, we are proud to be a trusted partner for thousands of companies worldwide, from small 
-                local businesses to multinational corporations, providing them with reliable sealing solutions 
+                Today, we are proud to be a trusted partner for thousands of companies worldwide, from small
+                local businesses to multinational corporations, providing them with reliable sealing solutions
                 that keep their operations running smoothly.
               </p>
             </div>
@@ -65,7 +65,7 @@ const About = () => {
               The principles that guide everything we do
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
               <div className="w-16 h-16 bg-[#F25C05] rounded-full flex items-center justify-center mx-auto mb-6">
@@ -78,7 +78,7 @@ const About = () => {
                 We maintain the highest standards in manufacturing and quality control, ensuring every product meets our rigorous specifications.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
               <div className="w-16 h-16 bg-[#F25C05] rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +90,7 @@ const About = () => {
                 We continuously invest in research and development to bring innovative sealing solutions to the market.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
               <div className="w-16 h-16 bg-[#F25C05] rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,10 +109,10 @@ const About = () => {
       {/* Call to Action */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Ready to Work With Us?
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto px-4">
             Let's discuss how our sealing solutions can help your business succeed
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

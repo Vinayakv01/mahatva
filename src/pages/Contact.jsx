@@ -25,7 +25,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // EmailJS configuration - Hardcoded values
       const serviceId = 'service_p0mg8lc';
@@ -43,18 +43,18 @@ const Contact = () => {
         productInterest: formData.productInterest || 'Not specified',
         message: formData.message,
         reply_to: formData.email,
-        to_date: new Date().toLocaleString('en-US', { 
-          year: 'numeric', 
-          month: 'long', 
-          day: 'numeric', 
-          hour: '2-digit', 
-          minute: '2-digit' 
+        to_date: new Date().toLocaleString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
         }),
       };
 
       // Send email using EmailJS
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
+
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({
@@ -196,7 +196,7 @@ const Contact = () => {
                     <option value="">Select a category</option>
                     <option value="radial-seals">Radial Seals</option>
                     <option value="axial-seals">Axial Seals</option>
-                    <option value="hydraulic-seals">Hydraulic Seals</option>
+                    {/* <option value="hydraulic-seals">Hydraulic Seals</option> */}
                     <option value="rotary-seals">Rotary Seals</option>
                     <option value="o-rings">O-Rings</option>
                     <option value="gaskets">Gaskets</option>

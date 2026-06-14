@@ -13,12 +13,12 @@ export const categories = [
     description: "Durable axial seals for industrial machinery",
     image: "/Dummy Image.PNG"
   },
-  {
-    id: 3,
-    name: "Hydraulic Seals",
-    description: "Specialized hydraulic seals for heavy-duty applications",
-    image: "/Dummy Image.PNG"
-  },
+  // {
+  //   id: 3,
+  //   name: "Hydraulic Seals",
+  //   description: "Specialized hydraulic seals for heavy-duty applications",
+  //   image: "/Dummy Image.PNG"
+  // },
   {
     id: 4,
     name: "Rotary Seals",
@@ -31,12 +31,12 @@ export const categories = [
     description: "Standard and custom O-rings for various industries",
     image: "/Dummy Image.PNG"
   },
-  {
-    id: 6,
-    name: "Gaskets",
-    description: "High-quality gaskets for sealing applications",
-    image: "/Dummy Image.PNG"
-  }
+  // {
+  //   id: 6,
+  //   name: "Gaskets",
+  //   description: "High-quality gaskets for sealing applications",
+  //   image: "/Dummy Image.PNG"
+  // }
 ];
 
 export const products = [
@@ -82,27 +82,27 @@ export const products = [
       "Easy installation"
     ]
   },
-  {
-    id: 3,
-    name: "Hydraulic Seal HS-300",
-    category: "Hydraulic Seals",
-    categoryId: 3,
-    description: "Specialized seal for hydraulic systems",
-    image: "/Dummy Image.PNG",
-    price: "$89.99",
-    specifications: {
-      material: "Polyurethane",
-      temperature: "-30°C to +100°C",
-      pressure: "Up to 25 bar",
-      diameter: "30mm - 150mm"
-    },
-    features: [
-      "High pressure resistance",
-      "Excellent sealing performance",
-      "Durable construction",
-      "Wide temperature range"
-    ]
-  },
+  // {
+  //   id: 3,
+  //   name: "Hydraulic Seal HS-300",
+  //   category: "Hydraulic Seals",
+  //   categoryId: 3,
+  //   description: "Specialized seal for hydraulic systems",
+  //   image: "/Dummy Image.PNG",
+  //   price: "$89.99",
+  //   specifications: {
+  //     material: "Polyurethane",
+  //     temperature: "-30°C to +100°C",
+  //     pressure: "Up to 25 bar",
+  //     diameter: "30mm - 150mm"
+  //   },
+  //   features: [
+  //     "High pressure resistance",
+  //     "Excellent sealing performance",
+  //     "Durable construction",
+  //     "Wide temperature range"
+  //   ]
+  // },
   {
     id: 4,
     name: "Precision Rotary Seal RS-400",
@@ -145,27 +145,27 @@ export const products = [
       "Easy to install"
     ]
   },
-  {
-    id: 6,
-    name: "Industrial Gasket G-600",
-    category: "Gaskets",
-    categoryId: 6,
-    description: "Heavy-duty gasket for industrial applications",
-    image: "/Dummy Image.PNG",
-    price: "$34.99",
-    specifications: {
-      material: "Compressed Fiber",
-      temperature: "-40°C to +150°C",
-      pressure: "Up to 20 bar",
-      diameter: "Custom sizes available"
-    },
-    features: [
-      "Excellent compression recovery",
-      "Chemical resistance",
-      "Custom sizing available",
-      "Long-lasting performance"
-    ]
-  }
+  // {
+  //   id: 6,
+  //   name: "Industrial Gasket G-600",
+  //   category: "Gaskets",
+  //   categoryId: 6,
+  //   description: "Heavy-duty gasket for industrial applications",
+  //   image: "/Dummy Image.PNG",
+  //   price: "$34.99",
+  //   specifications: {
+  //     material: "Compressed Fiber",
+  //     temperature: "-40°C to +150°C",
+  //     pressure: "Up to 20 bar",
+  //     diameter: "Custom sizes available"
+  //   },
+  //   features: [
+  //     "Excellent compression recovery",
+  //     "Chemical resistance",
+  //     "Custom sizing available",
+  //     "Long-lasting performance"
+  //   ]
+  // }
 ];
 
 export const companyInfo = {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import CategoryDropdown from './CategoryDropdown';
-import companyLogo from '../assets/companylogo.png';
+import companyLogo from '../assets/Logo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,11 +40,10 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive('/') 
-                  ? 'text-[#F25C05] bg-orange-50' 
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/')
+                  ? 'text-[#F25C05] bg-orange-50'
                   : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-              }`}
+                }`}
             >
               Home
             </Link>
@@ -52,11 +51,10 @@ const Navbar = () => {
             {/* Categories Dropdown */}
             <div className="relative">
               <button
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center ${
-                  isCategoriesOpen || location.pathname.startsWith('/categories')
-                    ? 'text-[#F25C05] bg-orange-50' 
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center ${isCategoriesOpen || location.pathname.startsWith('/categories')
+                    ? 'text-[#F25C05] bg-orange-50'
                     : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-                }`}
+                  }`}
                 onMouseEnter={() => setIsCategoriesOpen(true)}
                 onMouseLeave={() => setIsCategoriesOpen(false)}
               >
@@ -66,7 +64,7 @@ const Navbar = () => {
                 </svg>
               </button>
               {isCategoriesOpen && (
-                <CategoryDropdown 
+                <CategoryDropdown
                   onMouseEnter={() => setIsCategoriesOpen(true)}
                   onMouseLeave={() => setIsCategoriesOpen(false)}
                 />
@@ -76,11 +74,10 @@ const Navbar = () => {
             {/* Products Dropdown */}
             <div className="relative">
               <button
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center ${
-                  isProductsOpen || location.pathname.startsWith('/products')
-                    ? 'text-[#F25C05] bg-orange-50' 
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center ${isProductsOpen || location.pathname.startsWith('/products')
+                    ? 'text-[#F25C05] bg-orange-50'
                     : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-                }`}
+                  }`}
                 onMouseEnter={() => setIsProductsOpen(true)}
                 onMouseLeave={() => setIsProductsOpen(false)}
               >
@@ -122,22 +119,20 @@ const Navbar = () => {
 
             <Link
               to="/about"
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive('/about') 
-                  ? 'text-[#F25C05] bg-orange-50' 
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/about')
+                  ? 'text-[#F25C05] bg-orange-50'
                   : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-              }`}
+                }`}
             >
               About
             </Link>
 
             <Link
               to="/contact"
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive('/contact') 
-                  ? 'text-[#F25C05] bg-orange-50' 
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/contact')
+                  ? 'text-[#F25C05] bg-orange-50'
                   : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-              }`}
+                }`}
             >
               Contact
             </Link>
@@ -173,64 +168,59 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
               <Link
                 to="/"
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/') 
-                    ? 'text-[#F25C05] bg-orange-50' 
+                className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/')
+                    ? 'text-[#F25C05] bg-orange-50'
                     : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-                }`}
+                  }`}
                 onClick={closeMenu}
               >
                 Home
               </Link>
-              
+
               <Link
                 to="/categories"
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/categories') 
-                    ? 'text-[#F25C05] bg-orange-50' 
+                className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/categories')
+                    ? 'text-[#F25C05] bg-orange-50'
                     : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-                }`}
+                  }`}
                 onClick={closeMenu}
               >
                 Categories
               </Link>
-              
+
               <Link
                 to="/products"
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/products') 
-                    ? 'text-[#F25C05] bg-orange-50' 
+                className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/products')
+                    ? 'text-[#F25C05] bg-orange-50'
                     : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-                }`}
+                  }`}
                 onClick={closeMenu}
               >
                 Products
               </Link>
-              
+
               <Link
                 to="/about"
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/about') 
-                    ? 'text-[#F25C05] bg-orange-50' 
+                className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/about')
+                    ? 'text-[#F25C05] bg-orange-50'
                     : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-                }`}
+                  }`}
                 onClick={closeMenu}
               >
                 About
               </Link>
-              
+
               <Link
                 to="/contact"
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive('/contact') 
-                    ? 'text-[#F25C05] bg-orange-50' 
+                className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/contact')
+                    ? 'text-[#F25C05] bg-orange-50'
                     : 'text-gray-700 hover:text-[#F25C05] hover:bg-orange-50'
-                }`}
+                  }`}
                 onClick={closeMenu}
               >
                 Contact
               </Link>
-              
+
               <Link
                 to="/contact"
                 className="block bg-[#F25C05] text-white px-3 py-2 rounded-md text-base font-medium hover:bg-orange-600 transition-colors"
